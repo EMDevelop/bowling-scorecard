@@ -11,6 +11,14 @@ describe Frame do
 
   end
 
+  context 'I want the pins to reset after every frame' do
+
+    it 'inits with pins of 10' do
+      expect(frame.remaining_pins).to eq 10
+    end
+
+  end
+
   context 'I want to be able to knock over 10 pins in a roll' do
 
 
