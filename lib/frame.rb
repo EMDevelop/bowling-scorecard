@@ -16,7 +16,7 @@ class Frame
   private
 
   def get_roll(number)
-    Player.enter_roll(@remaining_pins, @frame_number, number)
+    Player.enter_roll(pins: @remaining_pins,frame:  @frame_number, roll: number)
   end
 
 end
