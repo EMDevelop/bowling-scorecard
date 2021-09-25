@@ -6,9 +6,9 @@
           1,
           1,
           null,
-          1,
-          null,
           2,
+          null,
+          1,
           null,
           1,
           1,
@@ -23,7 +23,11 @@
         "lines": [
           1,
           null,
+          1,
+          21,
           null,
+          null,
+          1,
           null,
           null
         ]
@@ -54,12 +58,9 @@
       "/Users/ed/Desktop/Makers/Projects/bowling-scorecard/lib/game.rb": {
         "lines": [
           1,
-          null,
           1,
           null,
           1,
-          2,
-          null,
           null,
           1,
           2,
@@ -67,8 +68,16 @@
           null,
           null,
           1,
+          2,
+          2,
+          null,
           null,
           1,
+          null,
+          1,
+          null,
+          1,
+          2,
           2,
           20,
           20,
@@ -81,6 +90,10 @@
           null,
           null,
           1,
+          22,
+          null,
+          null,
+          1,
           2,
           null,
           null,
@@ -88,6 +101,6 @@
         ]
       }
     },
-    "timestamp": 1632578342
+    "timestamp": 1632579047
   }
 }
