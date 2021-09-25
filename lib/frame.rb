@@ -9,7 +9,7 @@ class Frame
   attr_reader :frame_number, :remaining_pins
 
   def play 
-    @remaining_pins -= get_roll
+    @remaining_pins -= get_roll(:first)
   end
 
 
