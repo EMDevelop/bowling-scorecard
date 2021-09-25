@@ -12,6 +12,11 @@ describe Game do
       described_class.start_game 
     end
 
+    xit 'error if run 11 times' do
+      allow(described_class).to receive(:start_frame).exactly(11).times
+      expect{ described_class.start_game }.to raise_error "You're cheating!"
+    end
+
   end
 
 end
