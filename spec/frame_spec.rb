@@ -31,7 +31,7 @@ describe Frame do
 
   context 'I want my current frame to be marked complete after a strike' do
     
-    xit 'doesnt give allow input of second value if first score = 10' do
+    it 'doesnt give allow input of second value if first score = 10' do
       allow(frame).to receive(:record_roll).and_return(10)
       frame.play
     end
