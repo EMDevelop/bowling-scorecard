@@ -31,17 +31,17 @@ As a Player
 so that I can play again
 I want the pins to reset after every frame
 
-```
-
-```
-
 As a Player
 So that I can have a second chance to hit 10 pins
 I want to be able to have a second roll
 
+```
+
+```
+
 As a Player
 So that I know how well I am playing
-I want to know my score so far after each roll
+I want to be able to keep track of my score
 
 As a Player
 So that I can be rewarded for hitting all 10 pins in one go
@@ -58,6 +58,10 @@ I want to receive a bonus for my Spare, my roll score should be incremented by t
 As a Player
 So that I can finish the game
 My 10th frame should go for no longer than 3 rolls in total
+
+As a Player
+So that I know how well I am playing
+I want to know my score so far after each roll
 
 As a Player
 So that everyone can see how I played

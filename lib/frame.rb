@@ -4,19 +4,20 @@ class Frame
   def initialize(frame_number)
     @frame_number = frame_number
     @remaining_pins = 10
+    @first_roll_score = 0
   end
 
-  attr_reader :frame_number, :remaining_pins
+  attr_reader :frame_number, :remaining_pins, :first_roll_score
 
   def play 
-    @remaining_pins -= get_roll(:first)
-    @remaining_pins -= get_roll(:second)
+    [:first,:second].each { |roll| record_roll(roll) }
   end
 
   private
 
-  def get_roll(number)
-    Player.enter_roll(pins: @remaining_pins,frame:  @frame_number, roll: number)
+  def record_roll(number)
+    score = Player.enter_roll(pins: @remaining_pins,frame:  @frame_number, roll: number)
+    @remaining_pins -= score
   end
 
 end

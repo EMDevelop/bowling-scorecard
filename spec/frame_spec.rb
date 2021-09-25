@@ -21,20 +21,22 @@ describe Frame do
 
   context 'I want to be able to knock over 10 pins in a roll' do
 
-    it 'knocks 10 pins' do
-      allow(frame).to receive(:get_roll).and_return(10,0)
+    xit 'knocks 10 pins' do
+      allow(frame).to receive(:record_roll).and_return(10,0)
       frame.play
       expect(frame.remaining_pins).to eq 0
     end
 
   end
 
-  context 'I want to be able to have a second roll' do
+  context 'I want to be able to keep track of my score' do
 
-    xit 'checks user prompted to roll only twice' do
-      expect(frame).to receive(:get_roll).exactly(2).time
+    xit 'records first score' do
+      allow(frame).to receive(:record_roll).and_return(2,0)
       frame.play
+      expect(frame.first_roll_score).to eq 2
     end
+
   end
 
 end
