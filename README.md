@@ -119,3 +119,17 @@ I want to be informed that I scored a Gutter Game
   - this didn't work `echo "class Game"\ && echo "end" >> ./lib/game.rb`
 
 ##### Questions
+
+- Behaviour vs Implementation - Simplecov
+  - SimpleCov is telling me my coverage is 77% but my tests at commit `81fb9c08793df7a93fec274c14097b7b82094fca` cover 100% of the behavior required of the app, is plugin this driving the wrong behavior?
+
+```
+COVERAGE:  77.42% -- 24/31 lines in 4 files
+
++----------+-------------------+-------+--------+--------------+
+| coverage | file              | lines | missed | missing      |
++----------+-------------------+-------+--------+--------------+
+|  63.64%  | spec/game_spec.rb | 11    | 4      | 11-12, 16-17 |
+|  80.00%  | lib/game.rb       | 15    | 3      | 9-10, 18     |
++----------+-------------------+-------+--------+--------------+
+```
