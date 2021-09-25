@@ -116,4 +116,4 @@ I want to be informed that I scored a Gutter Game
   - `touch ./spec/game_spec.rb`
   - `echo "require 'game'" >> ./spec/game_spec.rb`
   - `touch ./lib/game.rb`
-  -
+  - this didn't work `echo "class Game"\ && echo "end" >> ./lib/game.rb`
