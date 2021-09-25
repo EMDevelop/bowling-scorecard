@@ -32,6 +32,10 @@ Tests will provide an accurate assessment of the behavior of my application, I w
 
 ```
 As a Player
+So that I can finish a game of bowling
+I want the game to have 10 frames
+
+As a Player
 So that I can start a game of bowling
 I want to be able to knock over 10 pins in a roll
 
@@ -42,10 +46,6 @@ I want the pins to reset after every frame
 As a Player
 So that I can have a second chance to hit 10 pins
 I want to be able to have a second roll
-
-As a Player
-So that I can finish a game of bowling
-I want the game to have 10 frames
 
 As a Player
 So that I know how well I am playing
@@ -92,14 +92,28 @@ I want to be informed that I scored a Gutter Game
 |Methods|Attributes|
 |-|-|
 |start_game()|NUMBER_OF_PINS Constant = 10|
+|setup_frames()|
 |calculate_score()|NUMBER_OF_FRAMES Constant = 10|
-|end_game()|@scores Array[frame,frame]|
+|end_game()|@frames Array[frame,frame]|
+||@player|
 
 `class: Frame`
 |Methods|Attributes|
 |-|-|
-|end_frame()|MAX_ROLLS Constant = 3|
+|play()|
+|end_frame?()|MAX_ROLLS Constant = 3|
 ||@frame_number|
 ||@first_roll_score Integer|
 ||@second_roll_score Integer|
 ||@remaining_pins Integer|
+
+##### Creating Code
+
+- Project Setup
+  - `git init`
+  - `rspec --init`
+  - `mkdir lib`
+  - `touch ./spec/game_spec.rb`
+  - `echo "require 'game'" >> ./spec/game_spec.rb`
+  - `touch ./lib/game.rb`
+  -
