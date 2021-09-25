@@ -13,8 +13,11 @@ describe Frame do
 
   context 'I want to be able to knock over 10 pins in a roll' do
 
+
     it 'knocks 10 pins' do
-      
+      allow(frame).to receive(:gets).and_return(10)
+      frame.play
+      expect(frame.remaining_pins).to eq 0
     end
 
   end

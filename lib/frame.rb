@@ -1,11 +1,24 @@
+require_relative './player'
 class Frame
 
   def initialize(frame_number)
     @frame_number = frame_number
+    @remaining_pins = 10
   end
 
-  attr_reader :frame_number
+  attr_reader :frame_number, :remaining_pins
 
-  
+  def play 
+    @remaining_pins -= Player.roll(get_roll)
+  end
+
+
+  private
+
+  def get_roll
+    puts "Enter your roll result for frame #{@frame_number}"
+    input = gets.to_i
+  end
+
 
 end
