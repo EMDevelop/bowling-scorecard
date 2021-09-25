@@ -1,6 +1,33 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/ed/Desktop/Makers/Projects/bowling-scorecard/spec/frame_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          2,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/bowling-scorecard/lib/frame.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/ed/Desktop/Makers/Projects/bowling-scorecard/spec/game_spec.rb": {
         "lines": [
           1,
@@ -61,6 +88,6 @@
         ]
       }
     },
-    "timestamp": 1632577464
+    "timestamp": 1632578342
   }
 }

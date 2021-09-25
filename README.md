@@ -4,18 +4,6 @@ In this project I will be creating the logic behind a game of bowling for an ind
 
 ---
 
-#### Overview of functionality
-
-- Count & Sum scores of bowling for 1 player
-- There are 10 frames
-- Each frame, a player tries to knock down 10 pins
-- Every frame, player can roll 1 or 2 times
-  - depends on strikes / spares
-- score = number of pins knocked down + bonuses for strikes / spares
-- after every frame, pins are reset
-
----
-
 #### My Approach
 
 I decided to map out the requirements into User Stories, breaking down the various rules and features of the game into testable and client readable step (see `User Stories`).
