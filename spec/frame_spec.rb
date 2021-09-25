@@ -30,4 +30,9 @@ describe Frame do
 
   end
 
+  context 'I want to be able to have a second roll' do
+    
+    expect(frame).to receive(:gets).exactly(2).times
+  end
+
 end
