@@ -29,12 +29,22 @@ describe Frame do
 
   end
 
+  context 'I want my current frame to be marked complete after a strike' do
+    
+    xit 'doesnt give allow input of second value if first score = 10' do
+      allow(frame).to receive(:record_roll).and_return(10)
+      frame.play
+    end
+
+  end
+
   context 'I want to be able to keep track of my score' do
 
     it 'records first score' do
-      allow(frame).to receive(:record_roll).and_return(2,0)
+      allow(frame).to receive(:get_player_input).and_return(2,3)
       frame.play
       expect(frame.first_roll_score).to eq 2
+      expect(frame.second_roll_score).to eq 3
     end
 
   end

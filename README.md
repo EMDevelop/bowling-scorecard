@@ -35,13 +35,15 @@ As a Player
 So that I can have a second chance to hit 10 pins
 I want to be able to have a second roll
 
-```
-
-```
-
 As a Player
 So that I know how well I am playing
 I want to be able to keep track of my score
+
+```
+
+```
+
+
 
 As a Player
 So that I can move onto my next turn after a knocking all 10 pins in one go
