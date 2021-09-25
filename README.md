@@ -44,12 +44,16 @@ So that I know how well I am playing
 I want to be able to keep track of my score
 
 As a Player
-So that I can be rewarded for hitting all 10 pins in one go
-I want to receive a bonus for a Strike, my roll score should be incremented by the number of pins knocked in the next 2 rolls
-
-As a Player
 So that I can move onto my next turn after a knocking all 10 pins in one go
 I want my current frame to be marked complete after a strike
+
+As a Player
+So that I know how well I am playing
+I want to know my score so far after each frame
+
+As a Player
+So that I can be rewarded for hitting all 10 pins in one go
+I want to receive a bonus for a Strike, my roll score should be incremented by the number of pins knocked in the next 2 rolls
 
 As a Player
 So that I can be rewarded for hitting all 10 pins in 2 goes (in a frame)
@@ -59,9 +63,6 @@ As a Player
 So that I can finish the game
 My 10th frame should go for no longer than 3 rolls in total
 
-As a Player
-So that I know how well I am playing
-I want to know my score so far after each roll
 
 As a Player
 So that everyone can see how I played
