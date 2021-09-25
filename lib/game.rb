@@ -1,4 +1,5 @@
 require_relative './frame'
+
 class Game
 
   NUMBER_OF_FRAMES = 10

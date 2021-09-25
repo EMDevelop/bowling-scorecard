@@ -11,4 +11,12 @@ describe Frame do
 
   end
 
+  context 'I want to be able to knock over 10 pins in a roll' do
+
+    it 'knocks 10 pins' do
+      
+    end
+
+  end
+
 end

@@ -28,12 +28,12 @@ So that I can start a game of bowling
 I want to be able to knock over 10 pins in a roll
 
 As a Player
-so that I can play again
-I want the pins to reset after every frame
-
-As a Player
 So that I can have a second chance to hit 10 pins
 I want to be able to have a second roll
+
+As a Player
+so that I can play again
+I want the pins to reset after every frame
 
 As a Player
 So that I know how well I am playing

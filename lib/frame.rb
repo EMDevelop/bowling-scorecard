@@ -6,4 +6,6 @@ class Frame
 
   attr_reader :frame_number
 
+  
+
 end

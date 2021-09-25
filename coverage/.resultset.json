@@ -16,6 +16,14 @@
           null,
           null,
           null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -28,6 +36,8 @@
           null,
           null,
           1,
+          null,
+          null,
           null,
           null
         ]
@@ -58,6 +68,7 @@
       "/Users/ed/Desktop/Makers/Projects/bowling-scorecard/lib/game.rb": {
         "lines": [
           1,
+          null,
           1,
           null,
           1,
@@ -99,8 +110,37 @@
           null,
           null
         ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/bowling-scorecard/spec/player_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          2,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ed/Desktop/Makers/Projects/bowling-scorecard/lib/player.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1632579047
+    "timestamp": 1632579939
   }
 }
