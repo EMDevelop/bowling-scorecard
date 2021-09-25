@@ -17,8 +17,12 @@ class Frame
   private
 
   def record_roll(first_second)
+    if @first_roll_score == 10
+      @remaining_pins = 0
+      return
+    end
     input = get_player_input(first_second)
-    first_second == :first ?  @first_roll_score =  input : @second_roll_score = input 
+    first_second == :first ?  @first_roll_score = input : @second_roll_score = input 
     @remaining_pins -= input
   end
 

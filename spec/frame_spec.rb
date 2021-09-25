@@ -22,8 +22,9 @@ describe Frame do
   context 'I want to be able to knock over 10 pins in a roll' do
 
     it 'knocks 10 pins' do
-      allow(frame).to receive(:record_roll).and_return(10,0)
+      allow(frame).to receive(:get_player_input).and_return(10)
       frame.play
+      p "this test"
       expect(frame.remaining_pins).to eq 0
     end
 
@@ -34,6 +35,7 @@ describe Frame do
     it 'doesnt give allow input of second value if first score = 10' do
       allow(frame).to receive(:record_roll).and_return(10)
       frame.play
+      expect(frame.second_roll_score).to eq 0
     end
 
   end
@@ -45,6 +47,17 @@ describe Frame do
       frame.play
       expect(frame.first_roll_score).to eq 2
       expect(frame.second_roll_score).to eq 3
+    end
+
+  end
+
+  context 'I want my current frame to be marked complete after a strike' do
+
+    it 'does not sum second game' do
+      allow(frame).to receive(:get_player_input).and_return(10,3)
+      frame.play
+      expect(frame.first_roll_score).to eq 10
+      expect(frame.second_roll_score).to eq 0
     end
 
   end
