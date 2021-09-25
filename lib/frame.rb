@@ -10,16 +10,13 @@ class Frame
 
   def play 
     @remaining_pins -= get_roll(:first)
+    @remaining_pins -= get_roll(:second)
   end
-
 
   private
 
-  def get_roll
-    Player.roll(get_roll)
-    puts "Enter your roll result for frame #{@frame_number}"
-    input = gets.to_i
+  def get_roll(number)
+    Player.enter_roll(@remaining_pins, @frame_number, number)
   end
-
 
 end
