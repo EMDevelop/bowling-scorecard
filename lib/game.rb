@@ -56,6 +56,7 @@ class Game
     return if current_frame.frame_number == 1
     p "----- The current frame is #{current_frame.frame_number}"
     prev_stike_bonus
+    # prev_prev_strike_bonus
     
   end
 
@@ -70,9 +71,7 @@ class Game
   def prev_stike_bonus
     current_frame, prev_frame = get_frames[:current], get_frames[:prev]
     # assuming that the current frame first isn't 10
-    if prev_frame.strike?
-      prev_frame.total += current_frame.total
-    end
+    prev_frame.strike? ? prev_frame.total += current_frame.total : return
 
   end
 
