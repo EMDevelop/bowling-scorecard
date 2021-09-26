@@ -54,16 +54,14 @@ class Game
 
   def calculate_scores
     current_frame = @frames[@current_frame]
-    # The below only tells you the score of the current frame
     current_frame.total = current_frame.first_roll_score + current_frame.second_roll_score
-    # The below section handles bonuses
-    handle_strike
+    handle_standard__frame_bonus
+    # handle_last_frame_bonus
   end
 
-  def handle_strike
+  def handle_standard__frame_bonus
     current_frame = get_frames[:current]
-    return if current_frame.frame_number == 1
-    p "----- The current frame is #{current_frame.frame_number}"
+    return if current_frame.frame_number == 1 || current_frame.frame_number == 10 ||
     add_stike_bonus
     add_spare_bonus
   end
