@@ -37,17 +37,19 @@ I want to be able to have a second roll
 
 As a Player
 So that I know how well I am playing
-I want to be able to keep track of my score
-
-```
-
-```
-
-
+I want to be able to keep track of my scores
 
 As a Player
 So that I can move onto my next turn after a knocking all 10 pins in one go
 I want my current frame to be marked complete after a strike
+
+```
+
+```
+
+As a Player
+So that everyone can see how I played
+I want to be informed of my final score
 
 As a Player
 So that I know how well I am playing
@@ -64,11 +66,6 @@ I want to receive a bonus for my Spare, my roll score should be incremented by t
 As a Player
 So that I can finish the game
 My 10th frame should go for no longer than 3 rolls in total
-
-
-As a Player
-So that everyone can see how I played
-I want to be informed of my final score
 
 As a Player
 So that I can brag to my friends for hitting 12 strikes

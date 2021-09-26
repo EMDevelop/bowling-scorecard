@@ -16,4 +16,12 @@ describe Game do
 
   end
 
+  context 'I want to know my score so far after each frame' do
+
+      it '' do
+
+      end
+
+  end
+
 end
