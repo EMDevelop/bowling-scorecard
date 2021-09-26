@@ -4,10 +4,10 @@ describe Game do
   let(:game) { Game.new(0) }
 
   context 'I want the game to have 10 frames' do
-  
+    
     before do
-      allow_any_instance_of(StandardFrame).to receive(:get_player_input).and_return(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
-    end
+      allow(Player).to receive(:gets).and_return(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+    end   
 
     it 'ends' do 
       game.start_game
@@ -25,7 +25,7 @@ describe Game do
   context 'I want to know my score so far after each frame' do
 
     before do
-      allow_any_instance_of(StandardFrame).to receive(:get_player_input).and_return(1,1)
+      allow(Player).to receive(:gets).and_return(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
     end   
 
     it 'Sums score of 1 per game = 20' do
