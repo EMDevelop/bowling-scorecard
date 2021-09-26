@@ -1,7 +1,7 @@
 class Player
 
   def self.enter_roll(pins:, frame:, roll:)
-    puts "Enter your #{roll} roll result for frame #{frame}"
+    print "#{roll} score:"
     input = handle_input(pins)
     input > pins ? pins : input
   end

@@ -1,8 +1,12 @@
 require_relative './standard_frame'
 require_relative './last_frame'
+require_relative 'formatting.rb'
+
 class Game
 
+  
   NUMBER_OF_FRAMES = 10
+  include Formatting
 
   def initialize(current_frame = 0)
     @current_frame = current_frame
@@ -14,19 +18,22 @@ class Game
 
   def start_game 
     loop_frames
+    @total = []
+    @frames.each { |frame|  @total << frame.total }
     gameover
   end
 
   def gameover
-    p "Game Over" if @current_frame == NUMBER_OF_FRAMES - 1 
+    grand_total = @total.sum
+    puts green("Game Over, you scored #{grand_total}")
+    puts green("A score of 300, that's a perfect game! well done") if grand_total == 300
+    puts red("A score of 0, really?? well done on your gutter game") if grand_total == 0
   end
 
   def total_score
     @total = []
     @frames.each { |frame|  @total << frame.total }
-    grand_total = @total.sum
-    p "A score of 300, that's a perfect game! well done" if grand_total == 300
-    grand_total
+    @total.sum
   end
 
   private 
@@ -34,10 +41,11 @@ class Game
   def loop_frames
     setup_frames
     while true do
+      puts blue("--------Frame: #{@current_frame + 1}")
       start_frame
       calculate_scores
       break if @current_frame == NUMBER_OF_FRAMES - 1
-      p "Score so far: #{total_score}"
+      puts yellow("Score so far: #{total_score}\n")
       @current_frame += 1
     end
     
@@ -102,3 +110,6 @@ class Game
   end
 
 end
+
+game = Game.new
+game.start_game

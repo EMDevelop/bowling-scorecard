@@ -9,11 +9,6 @@ describe Game do
       allow(Player).to receive(:gets).and_return(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
     end   
 
-    it 'ends' do 
-      game.start_game
-      expect{ game.gameover }.to output(include("Game Over")).to_stdout
-    end
-    
     it 'runs 10 times' do
       p "This test is expected to have 0 sum"
       expect(game).to receive(:start_frame).exactly(10).times
@@ -100,7 +95,27 @@ describe Game do
     it 'scores a perfect game' do
       allow(Player).to receive(:gets).and_return(10,10,10,10,10,10,10,10,10,10,10)
       game.start_game
-      expect{ game.total_score }.to output(include("A score of 300, that's a perfect game! well done")).to_stdout
+      expect{ game.gameover }.to output(include("A score of 300, that's a perfect game! well done")).to_stdout
+    end
+
+  end
+
+  context 'I want to be informed that I scored a Gutter Game' do
+
+    it 'scores a gutter game' do
+      allow(Player).to receive(:gets).and_return(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+      game.start_game
+      expect{ game.gameover }.to output(include("A score of 0, really?? well done on your gutter game")).to_stdout
+    end
+
+  end
+
+  context 'I want to be informed of my final score' do
+
+    it 'scores a gutter game' do
+      allow(Player).to receive(:gets).and_return(1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+      game.start_game
+      expect{ game.gameover }.to output(include("Game Over, you scored 2")).to_stdout
     end
 
   end
