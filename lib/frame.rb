@@ -13,18 +13,22 @@ class Frame
   attr_accessor :total
 
   def play 
-    [:first,:second].each { |first_second| record_roll(first_second) }
+    [:first,:second].each { |first_second| record_roll(first_second) unless strike? }
   end
+
+  def strike?
+    @first_roll_score == 10
+  end
+
+  # def spare?
+  #   @first_roll_score + @second_roll_score == 10
+  # end
 
   private
 
   def record_roll(first_second)
-    if @first_roll_score == 10
-      @remaining_pins = 0
-      return
-    end
     input = get_player_input(first_second)
-    first_second == :first ?  @first_roll_score = input : @second_roll_score = input 
+    first_second == :first ? @first_roll_score = input : @second_roll_score = input
     @remaining_pins -= input
   end
 

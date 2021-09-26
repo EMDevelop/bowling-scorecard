@@ -50,9 +50,7 @@ I want to be informed of my final score
 ```
 
 ```
-As a Player
-So that I know how well I am playing
-I want to know my score so far after each frame
+
 
 As a Player
 So that I can be rewarded for hitting all 10 pins in one go
@@ -61,6 +59,10 @@ I want to receive a bonus for a Strike, my roll score should be incremented by t
 As a Player
 So that I can be rewarded for hitting all 10 pins in 2 goes (in a frame)
 I want to receive a bonus for my Spare, my roll score should be incremented by the number of pins knocked in the next 1 roll
+
+As a Player
+So that I know how well I am playing
+I want to know my score so far after each frame
 
 As a Player
 So that I can finish the game

@@ -4,8 +4,8 @@ class Game
 
   NUMBER_OF_FRAMES = 10
 
-  def initialize(frame = 0)
-    @current_frame = frame
+  def initialize(current_frame = 0)
+    @current_frame = current_frame
     @frames = Array.new
     @total = Array.new
   end
@@ -22,10 +22,8 @@ class Game
   end
 
   def total_score
-    @frames.each { |frame| 
-      p frame
-      @total << frame.total
-    }
+    # p @frames
+    @frames.each { |frame|  @total << frame.total }
     @total.sum
   end
 
@@ -39,7 +37,6 @@ class Game
       break if @current_frame == NUMBER_OF_FRAMES - 1
       @current_frame += 1
     end
-    
   end
 
   def start_frame
@@ -48,13 +45,39 @@ class Game
 
   def calculate_scores
     current_frame = @frames[@current_frame]
+    # The below only tells you the score of the current frame
     current_frame.total = current_frame.first_roll_score + current_frame.second_roll_score
+    # The below section handles bonuses
+    handle_strike
   end
 
+  def handle_strike
+    current_frame = get_frames[:current]
+    return if current_frame.frame_number == 1
+    p "----- The current frame is #{current_frame.frame_number}"
+    prev_stike_bonus
+    
+  end
+
+  def get_frames
+    {
+      :current => @frames[@current_frame], 
+      :prev => @frames[@current_frame - 1], 
+      :prev_prev => @frames[@current_frame - 2]
+    }
+  end
+
+  def prev_stike_bonus
+    current_frame, prev_frame = get_frames[:current], get_frames[:prev]
+    # assuming that the current frame first isn't 10
+    if prev_frame.strike?
+      prev_frame.total += current_frame.total
+    end
+
+  end
 
   def setup_frames
     NUMBER_OF_FRAMES.times { |num| @frames << Frame.new(num + 1) }
   end
-
 
 end
