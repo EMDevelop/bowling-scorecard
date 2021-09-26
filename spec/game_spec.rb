@@ -95,4 +95,15 @@ describe Game do
 
   end
 
+  context 'I want to be informed that I scored a Perfect Game' do
+
+    it 'scores a perfect game' do
+      allow(Player).to receive(:gets).and_return(10,10,10,10,10,10,10,10,10,10,10)
+      game.start_game
+      expect{ game.total_score }.to output(include("A score of 300, that's a perfect game! well done")).to_stdout
+    end
+
+  end
+
+
 end

@@ -24,7 +24,9 @@ class Game
   def total_score
     @total = []
     @frames.each { |frame|  @total << frame.total }
-    @total.sum
+    grand_total = @total.sum
+    p "A score of 300, that's a perfect game! well done" if grand_total == 300
+    grand_total
   end
 
   private 
