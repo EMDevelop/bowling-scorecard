@@ -17,6 +17,10 @@ In this project I will be creating the logic behind a scorecard for a game of bo
     - if you get a strike you move onto the next frame
     - if it is the last game, then you have 3 rolls if roll 1 & 2 are a strike/spare
 
+#### Preview
+
+![scorecard](https://github.com/EMDevelop/public_resources/blob/main/images/bowling/perfectgame.png)
+
 #### My Approach
 
 I decided to map out the requirements into User Stories, breaking down the various rules and features of the game into testable and client readable step (see `User Stories`).
