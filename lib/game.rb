@@ -43,6 +43,15 @@ class Game
     @frames[@current_frame].play
   end
 
+    def get_frames
+    {
+      :current => @frames[@current_frame], 
+      :prev => @frames[@current_frame - 1], 
+      :prev_prev => @frames[@current_frame - 2]
+    }
+  end
+
+
   def calculate_scores
     current_frame = @frames[@current_frame]
     # The below only tells you the score of the current frame
@@ -55,24 +64,18 @@ class Game
     current_frame = get_frames[:current]
     return if current_frame.frame_number == 1
     p "----- The current frame is #{current_frame.frame_number}"
-    prev_stike_bonus
-    # prev_prev_strike_bonus
-    
+    add_stike_bonus    
   end
 
-  def get_frames
-    {
-      :current => @frames[@current_frame], 
-      :prev => @frames[@current_frame - 1], 
-      :prev_prev => @frames[@current_frame - 2]
-    }
-  end
 
-  def prev_stike_bonus
-    current_frame, prev_frame = get_frames[:current], get_frames[:prev]
+  def add_stike_bonus
+    current_frame, prev_frame, prev_prev_frame = get_frames[:current], get_frames[:prev], get_frames[:prev_prev]
     # assuming that the current frame first isn't 10
     prev_frame.strike? ? prev_frame.total += current_frame.total : return
 
+    if current_frame.frame_number != 2
+      prev_frame.strike? && prev_prev_frame.strike? ? prev_prev_frame.total += current_frame.first_roll_score : return
+    end
   end
 
   def setup_frames

@@ -44,9 +44,9 @@ describe Game do
     end
 
     it '30' do
-      allow(Player).to receive(:gets).and_return(10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+      allow(Player).to receive(:gets).and_return(10,10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
       game.start_game
-      expect(game.total_score).to eq 30
+      expect(game.total_score).to eq 49
     end
 
   end
