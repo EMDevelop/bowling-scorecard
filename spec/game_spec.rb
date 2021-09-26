@@ -37,16 +37,32 @@ describe Game do
 
   context 'I want to receive a bonus for a Strike' do
 
-    it '30' do
+    it 'first strike' do
       allow(Player).to receive(:gets).and_return(10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
       game.start_game
       expect(game.total_score).to eq 30
     end
 
-    it '30' do
+    it 'first 2 strike' do
       allow(Player).to receive(:gets).and_return(10,10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
       game.start_game
       expect(game.total_score).to eq 49
+    end
+
+    it 'multiple strikes' do
+      allow(Player).to receive(:gets).and_return(10,10,10,10,10,1,1,1,1,1,1,1,1,1,1)
+      game.start_game
+      expect(game.total_score).to eq 133
+    end
+
+  end
+
+  context 'I want to receive a bonus for a Spare' do
+
+    it 'first spare' do
+      allow(Player).to receive(:gets).and_return(2,8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+      game.start_game
+      expect(game.total_score).to eq 29
     end
 
   end

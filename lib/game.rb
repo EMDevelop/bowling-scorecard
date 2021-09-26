@@ -64,18 +64,22 @@ class Game
     current_frame = get_frames[:current]
     return if current_frame.frame_number == 1
     p "----- The current frame is #{current_frame.frame_number}"
-    add_stike_bonus    
+    add_stike_bonus
+    add_spare_bonus
   end
 
 
   def add_stike_bonus
     current_frame, prev_frame, prev_prev_frame = get_frames[:current], get_frames[:prev], get_frames[:prev_prev]
-    # assuming that the current frame first isn't 10
     prev_frame.strike? ? prev_frame.total += current_frame.total : return
-
     if current_frame.frame_number != 2
       prev_frame.strike? && prev_prev_frame.strike? ? prev_prev_frame.total += current_frame.first_roll_score : return
     end
+  end
+
+  def add_spare_bonus
+    current_frame, prev_frame = get_frames[:current], get_frames[:prev]
+    prev_frame.spare? ? prev_frame.total += current_frame.first_roll_score : return
   end
 
   def setup_frames

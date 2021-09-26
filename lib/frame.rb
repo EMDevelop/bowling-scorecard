@@ -20,9 +20,9 @@ class Frame
     @first_roll_score == 10
   end
 
-  # def spare?
-  #   @first_roll_score + @second_roll_score == 10
-  # end
+  def spare?
+    @first_roll_score + @second_roll_score == 10 && @first_roll_score != 10
+  end
 
   private
 

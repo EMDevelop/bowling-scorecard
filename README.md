@@ -47,14 +47,14 @@ As a Player
 So that everyone can see how I played
 I want to be informed of my final score
 
-```
-
-```
-
-
 As a Player
 So that I can be rewarded for hitting all 10 pins in one go
 I want to receive a bonus for a Strike, my roll score should be incremented by the number of pins knocked in the next 2 rolls
+
+
+```
+
+```
 
 As a Player
 So that I can be rewarded for hitting all 10 pins in 2 goes (in a frame)
@@ -117,16 +117,4 @@ I want to be informed that I scored a Gutter Game
 
 ##### Questions
 
-- Behaviour vs Implementation - Simplecov
-  - SimpleCov is telling me my coverage is 77% but my tests at commit `81fb9c08793df7a93fec274c14097b7b82094fca` cover 100% of the behavior required of the app, is plugin this driving the wrong behavior?
-
-```
-COVERAGE:  77.42% -- 24/31 lines in 4 files
-
-+----------+-------------------+-------+--------+--------------+
-| coverage | file              | lines | missed | missing      |
-+----------+-------------------+-------+--------+--------------+
-|  63.64%  | spec/game_spec.rb | 11    | 4      | 11-12, 16-17 |
-|  80.00%  | lib/game.rb       | 15    | 3      | 9-10, 18     |
-+----------+-------------------+-------+--------+--------------+
-```
+- How well did I conform to Behavioral testing? I feel like at parts I had no choice but to test instance variables
