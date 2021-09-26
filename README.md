@@ -55,11 +55,6 @@ As a Player
 So that I can be rewarded for hitting all 10 pins in 2 goes (in a frame)
 I want to receive a bonus for my Spare, my roll score should be incremented by the number of pins knocked in the next 1 roll
 
-
-```
-
-```
-
 As a Player
 So that I can finish the game
 My 10th frame should go for no longer than 3 rolls in total
@@ -67,6 +62,12 @@ My 10th frame should go for no longer than 3 rolls in total
 As a Player
 So that I know how well I am playing
 I want to know my score so far after each frame
+
+```
+
+```
+
+
 
 As a Player
 So that I can brag to my friends for hitting 12 strikes

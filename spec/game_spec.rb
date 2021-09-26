@@ -87,6 +87,12 @@ describe Game do
       expect(game.total_score).to eq 90
     end
 
+    it '9th round is a spare' do
+      allow(Player).to receive(:gets).and_return(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,1,2,0)
+      game.start_game
+      expect(game.total_score).to eq 14
+    end
+
   end
 
 end

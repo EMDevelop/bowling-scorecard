@@ -22,7 +22,7 @@ class Game
   end
 
   def total_score
-    # p @frames
+    @total = []
     @frames.each { |frame|  @total << frame.total }
     @total.sum
   end
@@ -35,8 +35,10 @@ class Game
       start_frame
       calculate_scores
       break if @current_frame == NUMBER_OF_FRAMES - 1
+      p "Score so far: #{total_score}"
       @current_frame += 1
     end
+    
   end
 
   def start_frame
@@ -62,6 +64,7 @@ class Game
     current_frame = @frames[@current_frame]
     current_frame.total = current_frame.first_roll_score + current_frame.second_roll_score + current_frame.third_roll_score
     add_last_strike_bonus
+    add_spare_bonus
   end
 
   def add_last_strike_bonus
@@ -74,7 +77,7 @@ class Game
     current_frame = get_frames[:current]
     return if current_frame.frame_number == 1 || current_frame.frame_number == 10 ||
     add_standard_strike_bonus
-    add_standard_spare_bonus
+    add_spare_bonus
   end
 
 
@@ -86,7 +89,7 @@ class Game
     end
   end
 
-  def add_standard_spare_bonus
+  def add_spare_bonus
     current_frame, prev_frame = get_frames[:current], get_frames[:prev]
     prev_frame.spare? ? prev_frame.total += current_frame.first_roll_score : return
   end
