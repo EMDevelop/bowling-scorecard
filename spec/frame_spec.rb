@@ -24,7 +24,6 @@ describe Frame do
     it 'knocks 10 pins' do
       allow(frame).to receive(:get_player_input).and_return(10)
       frame.play
-      p "this test"
       expect(frame.remaining_pins).to eq 0
     end
 

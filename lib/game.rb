@@ -36,8 +36,6 @@ class Game
     end
   end
 
-
-
   def setup_frames
     10.times { |num| @frames << Frame.new(num + 1) }
   end
