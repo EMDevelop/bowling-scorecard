@@ -4,7 +4,7 @@ describe Game do
   let(:game) { Game.new(0) }
 
   context 'I want the game to have 10 frames' do
-    
+
     before do
       allow(Player).to receive(:gets).and_return(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
     end   
@@ -75,7 +75,7 @@ describe Game do
 
   context 'My 10th frame should go for no longer than 3 rolls in total' do
 
-    xit 'last 3 rolls of 10th frame are strike' do
+    it 'last 3 rolls of 10th frame are strike' do
       allow(Player).to receive(:gets).and_return(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,10,10)
       game.start_game
       expect(game.total_score).to eq 30

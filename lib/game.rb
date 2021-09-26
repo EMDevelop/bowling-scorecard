@@ -51,12 +51,16 @@ class Game
     }
   end
 
-
   def calculate_scores
     current_frame = @frames[@current_frame]
     current_frame.total = current_frame.first_roll_score + current_frame.second_roll_score
     handle_standard__frame_bonus
-    # handle_last_frame_bonus
+    handle_last_frame_bonus if current_frame.frame_number == 10
+  end
+
+  def handle_last_frame_bonus
+    current_frame = @frames[@current_frame]
+    current_frame.total = current_frame.first_roll_score + current_frame.second_roll_score + current_frame.third_roll_score
   end
 
   def handle_standard__frame_bonus
