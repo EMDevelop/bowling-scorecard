@@ -27,9 +27,7 @@ class LastFrame < Frame
   def handle_second_roll
     @second_roll_score = get_player_input(:second)
     if strike? || spare?
-      p "remaining pins: #{remaining_pins}"
       @remaining_pins = 10 
-      p "remaining pins after: #{remaining_pins}"
       handle_third_roll
     else
       return

@@ -26,7 +26,14 @@ describe LastFrame do
       allow(frame).to receive(:get_player_input).and_return(1,2)
       frame.play
       expect(frame.first_roll_score + frame.second_roll_score + frame.third_roll_score).to eq 3
-    end    
+      expect(frame.third_roll_score).to eq 0
+    end 
+
+    it 'spare' do
+      allow(frame).to receive(:get_player_input).and_return(1,9,2)
+      frame.play
+      expect(frame.first_roll_score + frame.second_roll_score + frame.third_roll_score).to eq 12
+    end
 
   end
 
