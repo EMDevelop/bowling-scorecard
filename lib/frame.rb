@@ -8,7 +8,7 @@ class Frame
     @second_roll_score = 0
   end
 
-  attr_reader :frame_number, :remaining_pins, :first_roll_score, :second_roll_score
+  attr_accessor :frame_number, :remaining_pins, :first_roll_score, :second_roll_score
 
   def play 
     [:first,:second].each { |first_second| record_roll(first_second) }

@@ -13,35 +13,39 @@ class Game
 
   def start_game 
     loop_frames
-    # show_score
     gameover
   end
 
+  def gameover
+    p "Game Over" if @current_frame == NUMBER_OF_FRAMES - 1 
+  end
+
   private 
-
-  def start_frame
-    @frames[@current_frame].play
-  end
-
-  def show_scores
-
-  end
 
   def loop_frames
     setup_frames
     while true do
       start_frame
+      calculate_scores
       break if @current_frame == NUMBER_OF_FRAMES - 1
       @current_frame += 1
     end
+    
   end
+
+  def start_frame
+    @frames[@current_frame].play
+  end
+
+  def calculate_scores
+    p @frames[@current_frame]
+  end
+
+
 
   def setup_frames
-    10.times { |num| @frames << Frame.new(num + 1) }
+    NUMBER_OF_FRAMES.times { |num| @frames << Frame.new(num + 1) }
   end
 
-  def gameover
-    p "Game Over"
-  end
 
 end
