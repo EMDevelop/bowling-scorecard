@@ -61,17 +61,24 @@ class Game
   def handle_last_frame_bonus
     current_frame = @frames[@current_frame]
     current_frame.total = current_frame.first_roll_score + current_frame.second_roll_score + current_frame.third_roll_score
+    add_last_strike_bonus
+  end
+
+  def add_last_strike_bonus
+    current_frame, prev_frame, prev_prev_frame = get_frames[:current], get_frames[:prev], get_frames[:prev_prev]
+    prev_prev_frame.total += current_frame.first_roll_score if prev_frame.strike? && prev_prev_frame.strike? 
+    prev_frame.total += (current_frame.first_roll_score + current_frame.second_roll_score) if prev_frame.strike?  
   end
 
   def handle_standard__frame_bonus
     current_frame = get_frames[:current]
     return if current_frame.frame_number == 1 || current_frame.frame_number == 10 ||
-    add_stike_bonus
-    add_spare_bonus
+    add_standard_strike_bonus
+    add_standard_spare_bonus
   end
 
 
-  def add_stike_bonus
+  def add_standard_strike_bonus
     current_frame, prev_frame, prev_prev_frame = get_frames[:current], get_frames[:prev], get_frames[:prev_prev]
     prev_frame.strike? ? prev_frame.total += current_frame.total : return
     if current_frame.frame_number != 2
@@ -79,7 +86,7 @@ class Game
     end
   end
 
-  def add_spare_bonus
+  def add_standard_spare_bonus
     current_frame, prev_frame = get_frames[:current], get_frames[:prev]
     prev_frame.spare? ? prev_frame.total += current_frame.first_roll_score : return
   end

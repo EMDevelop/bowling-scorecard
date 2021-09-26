@@ -82,9 +82,9 @@ describe Game do
     end
 
     it 'last 5 are strikes' do
-      allow(Player).to receive(:gets).and_return(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,10,10,10,10)
+      allow(Player).to receive(:gets).and_return(0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,10,10,10,10)
       game.start_game
-      expect(game.total_score).to eq 60
+      expect(game.total_score).to eq 90
     end
 
   end
