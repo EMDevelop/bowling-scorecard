@@ -65,6 +65,14 @@ describe Game do
       expect(game.total_score).to eq 29
     end
 
+    it 'strike + spare + spare' do
+      allow(Player).to receive(:gets).and_return(10,2,8,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+      game.start_game
+      expect(game.total_score).to eq 64
+    end
+
+
+
   end
 
 end

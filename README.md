@@ -51,14 +51,15 @@ As a Player
 So that I can be rewarded for hitting all 10 pins in one go
 I want to receive a bonus for a Strike, my roll score should be incremented by the number of pins knocked in the next 2 rolls
 
-
-```
-
-```
-
 As a Player
 So that I can be rewarded for hitting all 10 pins in 2 goes (in a frame)
 I want to receive a bonus for my Spare, my roll score should be incremented by the number of pins knocked in the next 1 roll
+
+
+```
+
+```
+
 
 As a Player
 So that I know how well I am playing
