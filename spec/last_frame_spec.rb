@@ -16,6 +16,18 @@ describe LastFrame do
       expect(frame.first_roll_score + frame.second_roll_score + frame.third_roll_score).to eq 30
     end
 
+    it 'stike | spare' do
+      allow(frame).to receive(:get_player_input).and_return(10,1,9)
+      frame.play
+      expect(frame.first_roll_score + frame.second_roll_score + frame.third_roll_score).to eq 20
+    end
+
+    it 'no strike or spare' do
+      allow(frame).to receive(:get_player_input).and_return(1,2)
+      frame.play
+      expect(frame.first_roll_score + frame.second_roll_score + frame.third_roll_score).to eq 3
+    end    
+
   end
 
 end
