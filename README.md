@@ -43,14 +43,13 @@ As a Player
 So that I can move onto my next turn after a knocking all 10 pins in one go
 I want my current frame to be marked complete after a strike
 
-```
-
-```
-
 As a Player
 So that everyone can see how I played
 I want to be informed of my final score
 
+```
+
+```
 As a Player
 So that I know how well I am playing
 I want to know my score so far after each frame

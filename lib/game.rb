@@ -7,6 +7,7 @@ class Game
   def initialize(frame = 0)
     @current_frame = frame
     @frames = Array.new
+    @total = Array.new
   end
 
   attr_accessor :frames
@@ -18,6 +19,14 @@ class Game
 
   def gameover
     p "Game Over" if @current_frame == NUMBER_OF_FRAMES - 1 
+  end
+
+  def total_score
+    @frames.each { |frame| 
+      p frame
+      @total << frame.total
+    }
+    @total.sum
   end
 
   private 
@@ -38,9 +47,9 @@ class Game
   end
 
   def calculate_scores
-    p @frames[@current_frame]
+    current_frame = @frames[@current_frame]
+    current_frame.total = current_frame.first_roll_score + current_frame.second_roll_score
   end
-
 
 
   def setup_frames
