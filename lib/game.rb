@@ -1,4 +1,4 @@
-require_relative './frame'
+require_relative './standard_frame'
 
 class Game
 
@@ -83,7 +83,7 @@ class Game
   end
 
   def setup_frames
-    NUMBER_OF_FRAMES.times { |num| @frames << Frame.new(num + 1) }
+    NUMBER_OF_FRAMES.times { |num| @frames << StandardFrame.new(num + 1) }
   end
 
 end

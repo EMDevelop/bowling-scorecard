@@ -69,6 +69,34 @@
           null
         ]
       },
+      "/Users/ed/Desktop/Makers/Projects/bowling-scorecard/lib/standard_frame.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          86,
+          null,
+          null,
+          1,
+          222,
+          null,
+          null,
+          1,
+          null,
+          1,
+          135,
+          135,
+          135,
+          null,
+          null,
+          1,
+          91,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/ed/Desktop/Makers/Projects/bowling-scorecard/lib/frame.rb": {
         "lines": [
           1,
@@ -86,27 +114,11 @@
           1,
           null,
           1,
-          222,
-          null,
-          null,
-          1,
           230,
           null,
           null,
           1,
           72,
-          null,
-          null,
-          1,
-          null,
-          1,
-          135,
-          135,
-          135,
-          null,
-          null,
-          1,
-          91,
           null,
           null,
           null
@@ -207,8 +219,6 @@
           1,
           1,
           1,
-          null,
-          null,
           null,
           null,
           null,
@@ -337,6 +347,6 @@
         ]
       }
     },
-    "timestamp": 1632660290
+    "timestamp": 1632661375
   }
 }

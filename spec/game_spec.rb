@@ -6,7 +6,7 @@ describe Game do
   context 'I want the game to have 10 frames' do
   
     before do
-      allow_any_instance_of(Frame).to receive(:get_player_input).and_return(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+      allow_any_instance_of(StandardFrame).to receive(:get_player_input).and_return(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
     end
 
     it 'ends' do 
@@ -25,7 +25,7 @@ describe Game do
   context 'I want to know my score so far after each frame' do
 
     before do
-      allow_any_instance_of(Frame).to receive(:get_player_input).and_return(1,1)
+      allow_any_instance_of(StandardFrame).to receive(:get_player_input).and_return(1,1)
     end   
 
     it 'Sums score of 1 per game = 20' do
@@ -70,8 +70,6 @@ describe Game do
       game.start_game
       expect(game.total_score).to eq 64
     end
-
-
 
   end
 

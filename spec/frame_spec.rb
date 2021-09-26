@@ -1,7 +1,7 @@
-require 'frame'
-describe Frame do
+require 'standard_frame'
+describe StandardFrame do
 
-  let(:frame) { Frame.new(1) }
+  let(:frame) { StandardFrame.new(1) }
 
   context 'I want the game to have 10 frames' do
 

@@ -60,14 +60,13 @@ I want to receive a bonus for my Spare, my roll score should be incremented by t
 
 ```
 
+As a Player
+So that I can finish the game
+My 10th frame should go for no longer than 3 rolls in total
 
 As a Player
 So that I know how well I am playing
 I want to know my score so far after each frame
-
-As a Player
-So that I can finish the game
-My 10th frame should go for no longer than 3 rolls in total
 
 As a Player
 So that I can brag to my friends for hitting 12 strikes
